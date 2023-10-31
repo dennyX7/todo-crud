@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "todo_crud_backend": {
+      "candid": "src/todo_crud_backend/todo_crud_backend.did",
+      "package": "todo_crud_backend",
+      "type": "rust"
+    },
+    "todo_crud_frontend": {
+      "dependencies": [
+        "todo_crud_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/todo_crud_frontend/src/index.html"
+      },
+      "source": [
+        "src/todo_crud_frontend/assets",
+        "dist/todo_crud_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
